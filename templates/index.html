@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Calling Agent System - Overview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3em;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            background: #ff5252;
+        }
+
+        .features {
+            padding: 100px 20px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .feature-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .services-showcase {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .services-list {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+
+        .service-item {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            transition: all 0.3s;
+        }
+
+        .service-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(10px);
+        }
+
+        .service-emoji {
+            font-size: 3em;
+        }
+
+        .service-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .service-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .service-phone {
+            font-family: monospace;
+            font-size: 1.1em;
+            opacity: 0.8;
+        }
+
+        .stats {
+            padding: 100px 20px;
+            background: rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .stats-grid {
+            max-width: 1000px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ffd93d;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        section h2 {
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+
+        .tech-stack {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .tech-grid {
+            max-width: 1000px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .tech-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🎯 AI Calling Agent</h1>
+            <p class="tagline">Multi-Service Intelligent Call Center System</p>
+            <p style="font-size: 1.2em; margin-bottom: 40px;">
+                5 fully functional AI-powered services with real-time voice conversations,
+                live transcription, and automated data extraction.
+            </p>
+            <a href="http://localhost:5000" class="cta-button">🚀 Launch Dashboard</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2 style="text-align: center;">✨ Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎤</div>
+                <div class="feature-title">Real-Time Voice AI</div>
+                <p>Natural voice conversations powered by Google Gemini 2.5 Flash. No pre-recorded responses.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <div class="feature-title">Live Transcription</div>
+                <p>See conversations in real-time as they happen. Perfect for monitoring and training.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <div class="feature-title">Smart Data Extraction</div>
+                <p>Automatically extracts order IDs, appointment details, ticket numbers, and more.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Admin Dashboard</div>
+                <p>Track all calls, orders, appointments, and support tickets in one place.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">Beautiful UI</div>
+                <p>Modern, responsive design ready for client presentations and production use.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Easily Scalable</div>
+                <p>Add new services with just a few lines of configuration. No complex setup.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-showcase">
+        <h2>📞 5 Complete Services</h2>
+        <div class="services-list">
+            <div class="service-item">
+                <div class="service-emoji">🍔</div>
+                <div class="service-info">
+                    <div class="service-name">GourmetEats Restaurant</div>
+                    <div class="service-phone">+1-555-FOOD-001</div>
+                    <p>Take orders, handle customization, confirm delivery</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-emoji">🏥</div>
+                <div class="service-info">
+                    <div class="service-name">HealthCare Plus Hospital</div>
+                    <div class="service-phone">+1-555-HEAL-002</div>
+                    <p>Book appointments, assess needs, collect patient info</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-emoji">💻</div>
+                <div class="service-info">
+                    <div class="service-name">TechFix Support Center</div>
+                    <div class="service-phone">+1-555-TECH-003</div>
+                    <p>Diagnose issues, guide troubleshooting, create tickets</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-emoji">✈️</div>
+                <div class="service-info">
+                    <div class="service-name">SkyHigh Travel Agency</div>
+                    <div class="service-phone">+1-555-TRIP-004</div>
+                    <p>Book flights and hotels, handle special requests</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-emoji">📞</div>
+                <div class="service-info">
+                    <div class="service-name">Universal Customer Service</div>
+                    <div class="service-phone">+1-555-HELP-005</div>
+                    <p>General inquiries, returns, refunds, complaints</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <h2>💪 System Capabilities</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Active Services</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Concurrent Calls</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Real-Time</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Availability</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-stack">
+        <h2>🛠️ Technology Stack</h2>
+        <div class="tech-grid">
+            <div class="tech-item">Python</div>
+            <div class="tech-item">Flask</div>
+            <div class="tech-item">SocketIO</div>
+            <div class="tech-item">Google Gemini AI</div>
+            <div class="tech-item">WebRTC</div>
+            <div class="tech-item">JavaScript</div>
+        </div>
+        <p style="margin-top: 40px; font-size: 1.2em;">
+            Built with modern, production-ready technologies
+        </p>
+    </section>
+
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-content">
+            <h2 style="font-size: 2.5em; margin-bottom: 30px;">Ready to Get Started?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 40px;">
+                Launch the dashboard and start making calls in seconds!
+            </p>
+            <a href="http://localhost:5000" class="cta-button">🚀 Launch Dashboard</a>
+            <p style="margin-top: 30px; opacity: 0.7;">
+                Or run: <code style="background: rgba(0,0,0,0.3); padding: 10px 20px; border-radius: 5px;">python app.py</code>
+            </p>
+        </div>
+    </section>
+</body>
+</html>
